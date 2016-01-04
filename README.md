@@ -4,16 +4,18 @@ Num::HexFloat - Rudimentary C99 Hexadecimal Floating Point Support in Perl6
 
 ## SYNOPSIS
 
-   use v6;
-   use Num::HexFloat;
+````perl6
+use v6;
+use Num::HexFloat;
    
-   say to-hexfloat(pi);
-   # '0x1.921fb54442d18p+1'
-   say from-hexfloat('0x1.921fb54442d18p+1') == pi
-   # True
-   my $src = "e=0x1.5bf0a8b145769p+1, pi=0x1.921fb54442d18p+1";
-   say $src.subst($RE_HEXFLOAT, &from-hexfloat, :g)
-   # e=2.71828182845905, pi=3.14159265358979
+say to-hexfloat(pi);
+# '0x1.921fb54442d18p+1'
+say from-hexfloat('0x1.921fb54442d18p+1') == pi
+# True
+my $src = "e=0x1.5bf0a8b145769p+1, pi=0x1.921fb54442d18p+1";
+say $src.subst($RE_HEXFLOAT, &from-hexfloat, :g)
+# e=2.71828182845905, pi=3.14159265358979
+````
 
 ## DESCRIPTION
 
