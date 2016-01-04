@@ -12,10 +12,10 @@ use Num::HexFloat;
    
 say to-hexfloat(pi);
 # '0x1.921fb54442d18p+1'
-say from-hexfloat('0x1.921fb54442d18p+1') == pi
+say from-hexfloat('0x1.921fb54442d18p+1') == pi;
 # True
 my $src = "e=0x1.5bf0a8b145769p+1, pi=0x1.921fb54442d18p+1";
-say $src.subst($RE_HEXFLOAT, &from-hexfloat, :g)
+say $src.subst($RE_HEXFLOAT, &from-hexfloat, :g);
 # e=2.71828182845905, pi=3.14159265358979
 ````
 
@@ -27,10 +27,16 @@ say $src.subst($RE_HEXFLOAT, &from-hexfloat, :g)
 
 A regex that matches hexadecimal floating point notation.
 
-### `from-hexfloat(Str $str) returns Num`
+### `from-hexfloat($arg) returns Num`
 
-Parses `$str` as a C99 hexadecimal floating point notation and returns
+Parses `$arg` as a C99 hexadecimal floating point notation and returns
 `Num`, or `NaN` if it fails.
+
+`$arg` can be either `Str` or `Match` so you can go like: 
+
+````perl6
+$src.subst($RE_HEXFLOAT, &from-hexfloat, :g);
+````
 
 ### `to-hexfloat(Numeric $num) returns Str`
 
