@@ -1,3 +1,5 @@
+[![build status](https://secure.travis-ci.org/dankogai/p6-num-hexfloat.png)](http://travis-ci.org/dankogai/p6-num-hexfloat)
+
 # NAME
 
 Num::HexFloat - Rudimentary C99 Hexadecimal Floating Point Support in Perl6
