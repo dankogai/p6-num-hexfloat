@@ -21,5 +21,15 @@ my $max = {
 };
 is $max<num>.&to-hexfloat, $max.<str>, "$max<num> == $max<str>";
 is $max<str>.&from-hexfloat, $max<num>, "$max<str> == $max<num>";
+is from-hexfloat('0x0p+0'),  0e0, "from-hexfloat('0e0')";
+is from-hexfloat('-0x0p+0'),-0e0, "from-hexfloat('-0e0')";
+is from-hexfloat('inf'),     Inf, "from-hexfloat('inf')";
+is from-hexfloat('-inf'),   -Inf, "from-hexfloat('-inf')";
+is from-hexfloat('finite'),  NaN, "from-hexfloat('finite')";
+is from-hexfloat('nan'),     NaN, "from-hexfloat('nan')";
+is to-hexfloat(+0e0),  '0x0p+0',  "to-hexfloat(0e0)";
+is to-hexfloat(-0e0), '-0x0p+0',  "to-hexfloat(-0e0)";
+is to-hexfloat(+Inf),  'inf',     "to-hexfloat(Inf)";
+is to-hexfloat(-Inf), '-inf',     "to-hexfloat(-Inf)";
+is to-hexfloat(NaN),   'nan',     "to-hexfloat(NaN)";
 done-testing;
-
