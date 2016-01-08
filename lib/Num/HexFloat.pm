@@ -29,8 +29,8 @@ multi sub to-hexfloat(Num $num) returns Str {
     my $s = $num < 0 ?? '-' !! '';
     my $a = $num.abs;
     my $p = 0;
-    if $a < 1 { while $a < 1 { $a *= 2; $p--} }
-    else      { while $a > 2 { $a /= 2; $p++} }
+    if $a < 1 { while $a < 1  { $a *= 2; $p--} }
+    else      { while $a >= 2 { $a /= 2; $p++} }
     my $m = $a.base(16, 14).lc;
     $m ~~ s/0+$//;
     $m ~~ s/\.?$//;
