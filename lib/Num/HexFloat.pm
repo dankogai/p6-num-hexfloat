@@ -9,7 +9,6 @@ our $RE_HEXFLOAT is export = rx:i{
     'P'
     $<exp>   = [<[+-]>? <[0..9]>+]
 };
-# should've been multi but it didn't work :(
 proto from-hexfloat($arg) returns Num is export { * }
 multi sub from-hexfloat(Match $m) returns Num {
     return NaN unless $m;
