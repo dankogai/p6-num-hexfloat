@@ -6,7 +6,7 @@
     "description" : "Rudimentary C99 Hexadecimal Floating Point Support in Perl6",
     "authors" : [ "Dan Kogai" ],
     "provides" : {
-        "Num::HexFloat" : "lib/Num/HexFloat.pm"
+        "Num::HexFloat" : "lib/Num/HexFloat.rakumod"
     },
     "depends" : [ ],
     "resources" : [ ],
