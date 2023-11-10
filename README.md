@@ -1,4 +1,4 @@
-[![build status](https://secure.travis-ci.org/dankogai/p6-num-hexfloat.png)](http://travis-ci.org/dankogai/p6-num-hexfloat)
+[![.github/workflows/test.yml](https://github.com/dankogai/p6-num-hexfloat/actions/workflows/test.yml/badge.svg)](https://github.com/dankogai/p6-num-hexfloat/actions/workflows/test.yml)
 
 # NAME
 
