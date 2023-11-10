@@ -3,6 +3,7 @@
     "name" : "Num::HexFloat",
     "license" : "MIT",
     "version" : "0.1.3",
+    "auth" : "zef:dankogai",
     "description" : "Rudimentary C99 Hexadecimal Floating Point Support in Perl6",
     "authors" : [ "Dan Kogai" ],
     "provides" : {
