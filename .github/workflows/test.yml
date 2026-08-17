@@ -1,4 +1,9 @@
-on: [ push, pull_request ]
+on:
+  workflow_dispatch:
+  push:
+    tags: [ '*.*.*' ]
+  pull_request:
+    branches: [ main ]
 jobs:
   test:
     runs-on: ubuntu-latest
